@@ -32,20 +32,41 @@ height: 88%;
 border-bottom: 2px solid #f1f1f1;
 padding: 1rem;
 list-style: none;
-overflow-y: auto;
+
 }
 .todo-list li{
 background-color: #ddd;
-padding: 1rem;
+padding: .5rem;
 border-radius: 5px;
 color: #888;
 margin-bottom: 1rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+li button{
+  padding: .5rem 2rem;
+  outline: none;
+  border: none;
+  background-color: orangered;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: all .5s ease;
+}
+li button:hover{
+  background-color: orange;
 }
 .todo-list h2{
   color: #fff;
   text-align: center;
   margin-bottom: 1rem;
   
+}
+.todo-container{
+  height: 90%;
+  overflow-y: auto;
+  padding-right: 1rem;
 }
 .todo-form{
   height: 12%;
@@ -72,4 +93,14 @@ width: 100%;
 .todo-form p{
   color: #ddd;
   padding: 0 1rem;
+}
+
+@media (min-width:300px) and (max-width:700px) {
+  .todo-form p{
+    display: none;
+  }
+  .todo-form .form-control{
+    width: 100%;
+
+  }
 }

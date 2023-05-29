@@ -43,9 +43,12 @@ function App() {
       <div className="todo">
         <ul className="todo-list">
           <h2>Have A Great Day!</h2>
+          <div className="todo-container">
           {
-            todos.map((todo) => { return <li key={todo.id}>{todo.task} <button onClick={() => { handleDelete(todo.id) }}>Delete</button> </li> })
+            todos.map((todo) => { return <li key={todo.id}> <p> {todo.id}. {todo.task}</p>  <button onClick={() => { handleDelete(todo.id) }}>Complete</button> </li> })
           }
+          </div>
+         
         </ul>
         <form className="todo-form" onSubmit={handleFormSubmit}>
           <p>React Todo App By Rajdev Yadav</p>
